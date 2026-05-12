@@ -1,0 +1,8 @@
+Deep learning is a powerful branch of 
+artificial intelligence that enables computers to learn complex patterns from data.
+ Machine learning models are widely used in applications such as image recognition,
+  speech processing, recommendation systems, and natural language processing. 
+  Recurrent Neural Networks are specialized neural networks designed for sequential 
+  data and are commonly used for text prediction and language modeling tasks. 
+  RNN models process input data step by step and maintain information from previous steps using hidden states. However, simple recurrent neural networks often struggle to capture long-term dependencies because of the vanishing gradient problem. Long Short-Term Memory networks and Gated Recurrent Units were introduced to overcome these limitations and improve sequence learning performance. Deep learning techniques are also applied in healthcare, autonomous vehicles, robotics, cybersecurity, and smart assistants. Neural networks require training data, optimization algorithms, activation functions, and loss functions to improve prediction accuracy. High quality datasets and proper preprocessing play a major role in building efficient deep learning systems. Researchers continue to improve neural network architectures to achieve better accuracy,
+ faster training, and real-time performance in practical applications.
