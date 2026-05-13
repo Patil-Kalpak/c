@@ -1,0 +1,161 @@
+COMPLETE THEORY FOR VIVA
+1️⃣ What is Assembler?
+
+Assembler converts:
+
+Assembly Language -> Machine Code
+2️⃣ What is Object Program?
+
+Generated machine-level program containing:
+
+H Record
+T Record
+M Record
+E Record
+3️⃣ H Record (Header Record)
+
+Stores:
+
+Program Name
+Starting Address
+Program Length
+
+Format:
+
+H^ProgramName^StartAddress^ProgramLength
+
+Example:
+
+H^PG2^001000^000012
+4️⃣ T Record (Text Record)
+
+Stores actual object code.
+
+Format:
+
+T^StartAddress^Length^ObjectCode
+
+Example:
+
+T^001000^12^101006001020
+5️⃣ M Record (Modification Record)
+
+Used for relocation.
+
+Needed when address modification required.
+
+Format:
+
+M^Address^Length
+
+Example:
+
+M^001001^05
+6️⃣ E Record (End Record)
+
+Indicates end of object program.
+
+Contains starting execution address.
+
+Format:
+
+E^StartingAddress
+
+Example:
+
+E^001000
+7️⃣ Symbol Table
+
+Stores:
+
+Symbol Name -> Address
+
+Example:
+
+ADD1 -> 1006
+8️⃣ Location Counter (LOCCTR)
+
+Tracks current memory location.
+
+Updated according to instruction size.
+
+9️⃣ EQU Directive
+LABEL EQU value
+Assigns constant value
+No memory allocated
+🔟 BYTE Directive
+
+Stores character constant.
+
+Example:
+
+BYTE C'ABC'
+
+ASCII Hex:
+
+41 42 43
+1️⃣1️⃣ Opcode Table (OPTAB)
+
+Stores machine opcode of instructions.
+
+Example:
+
+LDA -> 00
+STA -> 20
+JMP -> 10
+MOST IMPORTANT VIVA QUESTIONS & ANSWERS
+Q1. Difference between Compiler and Assembler?
+Compiler	Assembler
+HLL to Machine Code	Assembly to Machine Code
+Q2. Why M record is needed?
+
+For relocation/modification of addresses.
+
+Q3. What is relocation?
+
+Loading program at different memory location.
+
+Q4. What is symbol table?
+
+Stores label names and addresses.
+
+Q5. What is object code?
+
+Machine-readable binary/hex code.
+
+Q6. Why multiple T records?
+
+When object code exceeds size limit (80 bytes).
+
+Q7. What is pass 1?
+Create symbol table
+Assign addresses
+Q8. What is pass 2?
+Generate object code
+Generate H,T,M,E records
+Q9. What is LOCCTR?
+
+Tracks memory allocation location.
+
+Q10. What is SIC format 3 instruction?
+
+3-byte instruction format.
+
+VERY IMPORTANT MEMORY POINTS
+H Record
+Program Information
+T Record
+Object Code
+M Record
+Address Modification
+E Record
+Program End
+
+This code is:
+
+shortest generalized version
+easy to memorize
+supports M record
+supports symbol table
+perfect for SPCC lab exam
+directly runnable in Python lab

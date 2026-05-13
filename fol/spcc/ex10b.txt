@@ -1,0 +1,163 @@
+COMPLETE THEORY FOR VIVA
+1️⃣ What is Linking Loader?
+
+A linking loader:
+
+Links multiple object programs
+AND
+Loads them into memory
+2️⃣ Main Functions of Linking Loader
+Linking
+
+Combines multiple control sections.
+
+Relocation
+
+Adjusts addresses according to memory allocation.
+
+Loading
+
+Loads final program into memory.
+
+3️⃣ What is ESTAB?
+
+ESTAB =
+
+External Symbol Table
+
+Stores:
+
+Control section names
+External symbols
+Absolute addresses
+4️⃣ PROGADDR
+Starting memory address for loading
+
+Example:
+
+4000
+5️⃣ Control Section
+
+Independent part of object program.
+
+Each control section has:
+
+separate header
+separate length
+6️⃣ H Record (Header Record)
+
+Format:
+
+H^ProgramName^Start^Length
+
+Example:
+
+H^PROG1^000000^00107A
+7️⃣ D Record (Define Record)
+
+Defines external symbols.
+
+Format:
+
+D^Symbol^Address
+
+Example:
+
+D^ALPHA^000030
+8️⃣ T Record (Text Record)
+
+Contains object code.
+
+Format:
+
+T^Start^Length^ObjectCode
+9️⃣ M Record (Modification Record)
+
+Used for relocation.
+
+Format:
+
+M^Address^Length^+Symbol
+
+Example:
+
+M^000006^05^+PROG2
+
+Means:
+
+Add address of PROG2
+🔟 E Record (End Record)
+
+Marks end of control section.
+
+1️⃣1️⃣ Pass 1 of Linking Loader
+
+Creates:
+
+ESTAB
+
+Assigns addresses to:
+
+control sections
+external symbols
+1️⃣2️⃣ Pass 2 of Linking Loader
+
+Performs:
+
+loading
+relocation
+modification
+IMPORTANT VIVA QUESTIONS & ANSWERS
+Q1. Difference between Linker and Loader?
+Linker	Loader
+Combines programs	Loads into memory
+Q2. What is relocation?
+
+Adjusting addresses after loading.
+
+Q3. Why M record is required?
+
+To modify relocatable addresses.
+
+Q4. What is external symbol?
+
+Symbol used across multiple programs.
+
+Q5. Why ESTAB is needed?
+
+To store external symbol addresses.
+
+Q6. What is control section?
+
+Independent object program module.
+
+Q7. What is absolute address?
+
+Final memory address after relocation.
+
+Q8. Which pass creates ESTAB?
+Pass 1
+Q9. Which pass performs relocation?
+Pass 2
+Q10. What happens if ESTAB entry duplicates?
+
+Loader generates:
+
+Duplicate Symbol Error
+MEMORY SHORTCUTS
+ESTAB
+External Symbol Table
+M Record
+Modify Address
+Linking
+Combine Programs
+Relocation
+Adjust Addresses
+
+This solution is:
+
+generalized
+shortest possible
+supports ESTAB + M record
+easy to memorize
+perfect for SPCC lab exam

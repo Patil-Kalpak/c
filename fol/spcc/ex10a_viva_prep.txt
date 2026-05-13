@@ -1,0 +1,135 @@
+COMPLETE THEORY FOR VIVA
+1️⃣ What are Program Blocks?
+
+Program blocks are:
+
+Logical divisions of a program
+
+Each block has:
+
+separate location counter
+separate memory area
+2️⃣ Why Program Blocks are Used?
+
+Used for:
+
+Better memory organization
+Efficient storage allocation
+Grouping related code/data
+3️⃣ USE Directive
+
+Changes current block.
+
+Example:
+
+USE CODE
+USE DATA
+4️⃣ Location Counter (LOCCTR)
+
+Each block maintains:
+
+Separate LOCCTR
+
+Tracks memory allocation inside block.
+
+5️⃣ RESW Directive
+RESW n
+
+Reserves:
+
+n × 3 bytes
+
+Because:
+
+1 word = 3 bytes in SIC
+6️⃣ Instruction Size
+
+In SIC:
+
+Each instruction = 3 bytes
+
+Examples:
+
+LDA
+STA
+ADD
+SUB
+7️⃣ Block Table
+
+Stores:
+
+Block Number
+Block Name
+Starting Address
+Block Length
+8️⃣ How Starting Address is Calculated?
+Next Block Start =
+Previous Block Start + Previous Block Length
+9️⃣ Example Calculation
+CODE Block
+LDA  -> 3
+STA  -> 3
+ADD  -> 3
+SUB  -> 3
+
+Total = 12 bytes = 0x0C
+🔟 DATA Block
+ALPHA RESW 2 = 6
+BETA  RESW 3 = 9
+GAMMA RESW 1 = 3
+
+Total = 18 bytes = 0x12
+IMPORTANT VIVA QUESTIONS & ANSWERS
+Q1. Difference between Program Blocks and Control Sections?
+Program Block	Control Section
+Inside same object program	Separate object program
+Single relocation	Independent relocation
+Q2. Why USE directive is needed?
+
+To switch between blocks.
+
+Q3. Does each block have separate LOCCTR?
+
+YES.
+
+Q4. Does USE allocate memory?
+
+NO.
+
+It only changes current block.
+
+Q5. What is default block?
+
+Block used before any USE statement.
+
+Q6. Why program blocks are useful?
+Efficient memory arrangement
+Better organization
+Reduces fragmentation
+Q7. What is SIC?
+Simplified Instructional Computer
+
+Used for teaching system software concepts.
+
+Q8. How many bytes in SIC word?
+3 bytes
+Q9. What happens after END?
+
+Assembler stops processing source program.
+
+Q10. Why separate block tables maintained?
+
+To track:
+
+addresses
+lengths
+memory allocation
+MEMORY SHORTCUTS
+USE
+Switch Block
+RESW
+Reserve Words
+LOCCTR
+Tracks Address
+Block Table
+Stores block info
